@@ -1,0 +1,23 @@
+spring:
+    datasource:
+      url: jdbc:postgresql://localhost:5432/postgres?useUnicode=true&characterEncoding=utf8
+      username: postgres
+      password: 123456
+      #schema: database/import.sql
+      #sql-script-encoding: utf-8
+      driver-class-name: org.postgresql.Driver
+
+    jpa:
+      database: POSTGRESQL
+      show-sql: true
+      hibernate:
+        ddl-auto: update
+      properties:
+         hibernate:
+            dialect: org.hibernate.dialect.PostgreSQLDialect
+            temp:
+              use_jdbc_metadata_defaults: false
+
+    thymeleaf:
+       cache: false
+       mode: HTML
